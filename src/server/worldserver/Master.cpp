@@ -159,7 +159,7 @@ public:
 
 				if (command->characterName[0] == "" && command->characterID[0] != 0)
 				{
-					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM character WHERE guid = %u", command->characterID[0]);
+					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM characters WHERE guid = %u", command->characterID[0]);
 					if (result)
 					{
 						Field *fields = result->Fetch();
@@ -170,7 +170,7 @@ public:
 
 				if (command->characterName[0] == "" && command->characterID[0] != 0)
 				{
-					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM character WHERE guid = %u", command->characterID[0]);
+					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM characters WHERE guid = %u", command->characterID[0]);
 					if (result)
 					{
 						Field *fields = result->Fetch();
@@ -181,7 +181,7 @@ public:
 
 				if (command->characterName[1] == "" && command->characterID[1] != 0)
 				{
-					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM character WHERE guid = %u", command->characterID[1]);
+					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM characters WHERE guid = %u", command->characterID[1]);
 					if (result)
 					{
 						Field *fields = result->Fetch();
@@ -269,7 +269,7 @@ public:
 
 				if (ChatLog->characterName[0] == "" && ChatLog->characterID[0] != 0)
 				{
-					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM character WHERE guid = %u", ChatLog->characterID[0]);
+					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM characters WHERE guid = %u", ChatLog->characterID[0]);
 					if (result)
 					{
 						Field *fields = result->Fetch();
@@ -280,7 +280,7 @@ public:
 
 				if (ChatLog->characterName[1] == "" && ChatLog->characterID[1] != 0)
 				{
-					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM character WHERE guid = %u", ChatLog->characterID[1]);
+					QueryResult result = CharacterDatabase.PQuery("SELECT name FROM characters WHERE guid = %u", ChatLog->characterID[1]);
 					if (result)
 					{
 						Field *fields = result->Fetch();
