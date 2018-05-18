@@ -920,8 +920,8 @@ bool AuthSocket::_HandleRealmList()
             // TODO: Make this customizable
             pkt << uint8(5);
             pkt << uint8(4);
-            pkt << uint8(7);
-            pkt << uint16(18019);
+            pkt << uint8(8);
+            pkt << uint16(18414);
         }
 
         ++RealmListSize;
